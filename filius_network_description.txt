@@ -1,0 +1,31 @@
+
+FILIUS Netzwerkstruktur (Konzeptuell)
+
+Provider:
+  IP: 200.50.0.1
+  Dienste: DHCP, DNS
+
+Company:
+  Firewall (DMZ-Grenze):
+    IP: 192.168.100.1/26
+    Routen: 10.0.0.0/24 via 10.0.0.1
+
+  Router (DMZ <-> Intern):
+    DMZ IP: 192.168.100.50
+    Internes LAN IP: 10.0.0.1/24
+
+  Webserver (DMZ):
+    IP: 192.168.100.60
+
+  Interner Server:
+    IP: 10.0.0.100
+
+Privathaushalt:
+  Router (DHCP vom Provider)
+  PC:
+    IP: 192.168.0.100
+    Gateway: Heimrouter
+    DNS: vom Provider
+
+Routing:
+  - Manuelle statische Routen zu konfigurieren!
